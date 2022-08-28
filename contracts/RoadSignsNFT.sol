@@ -16,7 +16,7 @@ contract RoadSignsNFT is ERC721URIStorage {
 
   string baseSvg = "<svg width='800' height='800' fill='none' xmlns='http://www.w3.org/2000/svg'><style>.base { font-family: Lato,sans-serif; margin:100px;}</style><g><rect width='100%' height='100%' fill='none'/> <rect x='";
 
-  constructor() ERC721 ("SquareNFT", "SQUARE") {
+  constructor() ERC721 ("RoadSignsNFT", "RFT") {
     console.log("Mint NFT contract");
   }
 
@@ -41,7 +41,8 @@ contract RoadSignsNFT is ERC721URIStorage {
     string memory json = Base64.encode(bytes(string(abi.encodePacked(
       '{"name": "',
         city,
-        '", "description": "A highly acclaimed collection of squares.", "image": "data:image/svg+xml;base64,',
+        '", "attributes":[{"trait_type": "Country", "value": "UKRAINE"}, {"trait_type": "Status", "value": "OCCUPIED"}]',
+        ', "description": "Road sign of russian occupied city/village in Ukraine", "image": "data:image/svg+xml;base64,',
         Base64.encode(bytes(finalSvg)),
       '"}'
     ))));

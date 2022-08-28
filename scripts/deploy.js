@@ -39,6 +39,7 @@ const main = async () => {
       let txn = await nftContract.mintNFT(cities[i], coordinates[i][1], coordinates[i][0])
       await txn.wait()
       console.log("Minted NFT: " + cities[i]);
+      if (i == 3) break;
     }
 
 };
