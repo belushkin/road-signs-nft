@@ -5,7 +5,7 @@ const main = async () => {
 
   console.log("Contract deployed to:", nftContract.address);
 
-  const cities = ["Станіслав","Херсон","Нова Збур'ївка","Залізний порт","Гола пристань","Олешки","Антонівка","Нова Каховка","Виноградове",
+  const cities = ["Станіслав","Херсон","Нова Збур'ївка","Залізний Порт","Гола Пристань","Олешки","Антонівка","Нова Каховка","Виноградове",
   "Лазурне","Каланчак","Чаплинка","Каховка","Берислав","Лозове","Борозенське","Олександрівка","Любимівка","Асканія-Нова","Новотроїцьке","Новоолексіївка",
   "Горностаївка","Велика Лепетиха","Верхній Рогачик","Нижні Сірогози","Агаймани","Іванівка","Новотроїцьке","Генічеськ","Армянськ","Красноперекопськ",
   "Чорноморське","Євпаторія","Джанкой","Красногвардійське","Гвардійське","Саки","Севастополь","Сімферополь","Бахчисарай","Ялта","Гурзуф",
@@ -36,10 +36,14 @@ const main = async () => {
 
     for (i=0; i < cities.length; i++) {
       // Wait for it to be mined.
-      let txn = await nftContract.mintNFT(cities[i], coordinates[i][1], coordinates[i][0])
-      await txn.wait()
+      try {
+        let txn = await nftContract.mintNFT(cities[i], coordinates[i][1], coordinates[i][0])
+        await txn.wait()
+      } catch (e) {
+        console.log("Skipped NFT: " + cities[i]);
+        continue;
+      }
       console.log("Minted NFT: " + cities[i]);
-      if (i == 3) break;
     }
 
 };

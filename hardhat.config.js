@@ -8,5 +8,13 @@ module.exports = {
       url: process.env.QUICKNODE_API_KEY_URL,
       accounts: [process.env.RINKEBY_PRIVATE_KEY],
     },
+    mumbai: {
+      url: process.env.MUMBAI_ALCHEMY_API_KEY_URL,
+      accounts: [process.env.MUMBAI_PRIVATE_KEY],
+    },
+    matic: {
+      url: process.env.MATIC_ALCHEMY_API_KEY_URL,
+      accounts: [process.env.MATIC_PRIVATE_KEY],
+    }
   },
 };
