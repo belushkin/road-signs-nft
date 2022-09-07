@@ -39,6 +39,7 @@ contract RoadSignsNFT is ERC721URIStorage, Ownable {
     ));
 
     // Get all the JSON metadata in place and base64 encode it.
+    // https://i.imgur.com/f0Wg3M3.jpeg
     string memory json = Base64.encode(bytes(string(abi.encodePacked(
       '{"name": "',
         city,
@@ -55,6 +56,8 @@ contract RoadSignsNFT is ERC721URIStorage, Ownable {
     console.log("--------------------\n");
 
     _safeMint(msg.sender, newItemId);
+
+    // json keeper link
     _setTokenURI(newItemId, finalTokenUri);
 
     _tokenIds.increment();
