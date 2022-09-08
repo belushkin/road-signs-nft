@@ -3,7 +3,7 @@ const main = async () => {
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
 
-  console.log("Contract deployed to:", nftContract.address);
+  console.log("Contract deployed to:", nftContract.address.toLowerCase());
 
   const cities = ["Станіслав","Херсон","Нова Збур'ївка","Залізний Порт","Гола Пристань","Олешки","Антонівка","Нова Каховка","Виноградове",
   "Лазурне","Каланчак","Чаплинка","Каховка","Берислав","Лозове","Борозенське","Олександрівка","Любимівка","Асканія-Нова","Новотроїцьке","Новоолексіївка",
@@ -44,6 +44,11 @@ const main = async () => {
         continue;
       }
       console.log("Minted NFT: " + cities[i]);
+
+      // Stop for demo
+      if (i == 0) {
+        break;
+      }
     }
 
 };
