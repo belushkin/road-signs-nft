@@ -8,19 +8,31 @@ Please run next commands to init the project
 
 ```
 git clone https://github.com/belushkin/road-signs-nft.git
-cd road-signs-nft
-npm init -y
-npm install --save-dev hardhat@2.9.9
-npm install dotenv
-```
-
-Next:
-
-```
+cd road-signs-nft & npm install
 npx hardhat
-npm install @openzeppelin/contracts
-npx hardhat run scripts/run.js ???????
 ```
+
+
+## Create .env file in the root of the project
+and put next content there:
+```
+RINKEBY_ALCHEMY_API_KEY_URL=
+RINKEBY_PRIVATE_KEY=
+
+GOERLI_ALCHEMY_API_KEY_URL=
+GOERLI_PRIVATE_KEY=
+
+MUMBAI_ALCHEMY_API_KEY_URL=
+MUMBAI_PRIVATE_KEY=
+
+MATIC_ALCHEMY_API_KEY_URL=
+MATIC_PRIVATE_KEY=
+```
+
+```
+npx hardhat run scripts/ex_1.js
+```
+
 
 ## Example of the JSON required for NFT
 ```
