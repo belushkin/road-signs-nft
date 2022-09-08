@@ -19,25 +19,7 @@ Next:
 ```
 npx hardhat
 npm install @openzeppelin/contracts
-npx hardhat run scripts/run.js
-```
-
-## Resources to get API keys
-https://www.quicknode.com/
-https://alchemy.com/
-
-
-## Faucets to get coins on Rinkeby
-- https://app.mycrypto.com/faucet
-- https://faucet.rinkeby.io/
-- https://faucets.chain.link/rinkeby
-
-
-## Deploy to Rinkeby
-
-then check it on opensea: https://testnets.opensea.io/
-```
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/run.js ???????
 ```
 
 ## Example of the JSON required for NFT
@@ -52,6 +34,31 @@ npx hardhat run scripts/deploy.js --network rinkeby
 ## JSON keeper
 
 https://jsonkeeper.com/
+https://jsonbin.it/
+
+
+## Resources to get API keys
+https://www.quicknode.com/
+https://alchemy.com/
+
+
+## Faucets to get coins on Rinkeby
+- https://app.mycrypto.com/faucet
+- https://faucet.rinkeby.io/
+- https://faucets.chain.link/rinkeby
+
+- https://goerlifaucet.com/
+
+## Run local
+```
+npx hardhat run scripts/ex_1.js
+npx hardhat run scripts/ex_2.js
+
+npx hardhat run scripts/ex_2_deploy.js --network rinkeby
+npx hardhat run scripts/ex_2_deploy.js --network goerli
+```
+then check it on opensea: https://testnets.opensea.io/
+# https://testnets.opensea.io/assets/goerli/0x51e51336f1b48492a99eb7b4eb42757b97190dfd/0
 
 ## What is SVG
 
@@ -132,3 +139,14 @@ npx hardhat run scripts/deploy.js --network matic
 ## Polygonscan
 
 https://mumbai.polygonscan.com/
+
+
+## Preview of NFT pictures:
+https://github.com/belushkin/nft
+
+```
+git clone https://github.com/belushkin/nft.git
+cd nft
+npm install
+npm start
+```

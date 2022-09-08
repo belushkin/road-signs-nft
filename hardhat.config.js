@@ -5,8 +5,12 @@ module.exports = {
   solidity: '0.8.1',
   networks: {
     rinkeby: {
-      url: process.env.QUICKNODE_API_KEY_URL,
+      url: process.env.RINKEBY_ALCHEMY_API_KEY_URL,
       accounts: [process.env.RINKEBY_PRIVATE_KEY],
+    },
+    goerli: {
+      url: process.env.GOERLI_ALCHEMY_API_KEY_URL,
+      accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
     mumbai: {
       url: process.env.MUMBAI_ALCHEMY_API_KEY_URL,
@@ -15,6 +19,6 @@ module.exports = {
     matic: {
       url: process.env.MATIC_ALCHEMY_API_KEY_URL,
       accounts: [process.env.MATIC_PRIVATE_KEY],
-    }
+    },
   },
 };
